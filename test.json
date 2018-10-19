@@ -1,0 +1,19 @@
+{
+    "jobName": "test-azqo15",
+    "image": "10.11.3.8:5000/pai-images/deepo:v1.1",
+    "gpuType": "debug",
+    "retryCount": 0,
+    "taskRoles": [
+        {
+            "name": "test",
+            "taskNumber": 1,
+            "cpuNumber": 4,
+            "memoryMB": 10000,
+            "shmMB": 64,
+            "gpuNumber": 0,
+            "minFailedTaskCount": 1,
+            "minSucceededTaskCount": null,
+            "command": "sleep 1d"
+        }
+    ]
+}
