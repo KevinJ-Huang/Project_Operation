@@ -1,0 +1,16 @@
+import cv2
+import matplotlib.pyplot as plt
+import os
+from PIL import Image
+
+path = 'Midllery_small'
+save_path = 'Midllery_small_color'
+pos = 'left'
+
+names = os.listdir(os.path.join(path,pos))
+for name in names:
+    plt.figure()
+    image = cv2.imread(os.path.join(path,pos,name),0)
+    plt.imsave(os.path.join(save_path, pos, '{}.png'.format(name)),image)
+    
+      
